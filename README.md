@@ -1,18 +1,23 @@
 Enterprise Supply Chain & Logistics Analytics: Target Brazil
-Summary
+# Summary
 This project analyzes 102,451 e-commerce orders from Target Brazil to identify systemic supply chain bottlenecks, optimize delivery routing, and track financial throughput. By engineering an automated SQL backend utilizing Common Table Expressions (CTEs) and Window Functions, the raw transactional data was transformed into actionable Business Intelligence, reducing logistical inefficiencies and identifying high-friction delivery corridors.
-Business Problem
+
+# Business Problem
 Rapidly scaling e-commerce platforms frequently suffer from profit margin degradation due to inefficient logistics, high freight costs, and delayed deliveries. The objective of this analysis was to:
 Automate Month-over-Month (MoM) revenue tracking.
 Isolate geographic corridors with the highest variance between estimated and actual delivery dates.
 Perform Cohort Analysis to track customer retention based on their initial purchase month.
-Technical Stack
+
+# Technical Stack
 Database Management: PostgreSQL
 Query Optimization: Advanced CTEs, Window Functions (LAG(), OVER(), PARTITION BY, DATE_TRUNC()), Complex Joins
 Data Visualization: Tableau / Power BI (Dashboarding)
 Automated Financial Forecasting (Month-over-Month Growth)
+
 To provide stakeholders with real-time financial tracking, I engineered a query to calculate MoM revenue growth.
+
 Analytical Concept: Using the LAG() window function allows us to look at the previous row's data (last month's revenue) and mathematically compare it to the current row (this month's revenue) without needing complex subqueries.
+
 WITH MonthlyRevenue AS (  
 SELECT  
 DATE_TRUNC('month', o.order_purchase_timestamp) AS order_month,  
@@ -54,7 +59,7 @@ ORDER BY avg_delay_in_days DESC
 LIMIT 10;
 
 
-Customer Cohort Analysis (Retention Tracking)
+# Customer Cohort Analysis (Retention Tracking)
 To understand Customer Lifetime Value (CLV), we isolate the month a customer made their first purchase and track their repeat behavior.
 WITH FirstPurchase AS (  
 SELECT  
