@@ -1,4 +1,4 @@
-Enterprise Supply Chain & Logistics Analytics: Target Brazil
+[Enterprise Supply Chain & Logistics Analytics: Target Brazil
 # Summary
 This project analyzes 102,451 e-commerce orders from Target Brazil to identify systemic supply chain bottlenecks, optimize delivery routing, and track financial throughput. By engineering an automated SQL backend utilizing Common Table Expressions (CTEs) and Window Functions, the raw transactional data was transformed into actionable Business Intelligence, reducing logistical inefficiencies and identifying high-friction delivery corridors.
 
@@ -82,3 +82,4 @@ Strategic Recommendations
 Logistics Rerouting: The data indicates severe delivery variances (avg. delay > 5 days) in Northern states (e.g., AM, RR). Recommend establishing hyper-local micro-fulfillment centers in these tiers to reduce freight dependency on central hubs.
 Freight Pricing Elasticity: Cart abandonment correlates heavily with freight costs exceeding 15% of the total product value. Recommend a subsidized freight model for orders over $100 to increase the Average Order Value (AOV).
 Retention Triggers: Cohort analysis reveals a steep drop-off in month 2. Implementing an automated, targeted marketing campaign at Day 25 post-purchase can mitigate this churn.
+](https://github.com/juliankingsleyj-glitch)
